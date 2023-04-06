@@ -20,14 +20,15 @@ RUN \
 &&  cd /tmp \
 &&  unzip -o smokeping.zip \
 &&  cp -Rv /tmp/SmokePing-master/htdocs/css /usr/share/webapps/smokeping/ \
-&&  cp -Rv /tmp/SmokePing-master/htdocs/js /usr/share/webapps/smokeping/ \
 &&  rm -rf /usr/share/webapps/smokeping/cropper \
-&&  cp /tmp/SmokePing-master/etc/basepage.html.dist /etc/smokeping/basepage.html \
-&&  cp /tmp/SmokePing-master/bin/smokeping /usr/bin \
-&&  cp /tmp/SmokePing-master/bin/smokeping_cgi /usr/bin \
-&&  cp /tmp/SmokePing-master/bin/smokeinfo /usr/bin \
-&&  cp /tmp/SmokePing-master/lib/*.pm /usr/share/perl5/vendor_perl/ \
-&&  cp -Rv /tmp/SmokePing-master/lib/Smokeping/* /usr/share/perl5/vendor_perl/Smokeping \
+&&  cp -Rv /tmp/SmokePing-master/htdocs/js /usr/share/webapps/smokeping/ \
+&&  cp -Rfv /tmp/SmokePing-master/etc/basepage.html.dist /etc/smokeping/basepage.html \
+&&  cp -Rfv /tmp/SmokePing-master/bin/smokeping /usr/bin \
+&&  cp -Rfv /tmp/SmokePing-master/bin/smokeping_cgi /usr/bin \
+&&  cp -Rfv /tmp/SmokePing-master/bin/smokeinfo /usr/bin \
+&&  cp -Rfv /tmp/SmokePing-master/bin/tSmoke /usr/bin \
+&&  cp -Rfv /tmp/SmokePing-master/lib/*.pm /usr/share/perl5/vendor_perl/ \
+&&  cp -Rfv /tmp/SmokePing-master/lib/Smokeping/* /usr/share/perl5/vendor_perl/Smokeping \
 &&  chmod ug+s /usr/bin/tcpping \
 &&  chmod +rx /usr/bin/tcpping
 
